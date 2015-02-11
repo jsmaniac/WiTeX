@@ -17,12 +17,13 @@ https://github.com/AndrewBelt/WiTeX
 
 /* Latin Modern (LaTeX default) font */
 
+	/* pls someone offer me a CDN for these fonts so I can save bandwidth for
+	   my email service */
+
 @font-face {
 	font-family: 'Latin Modern Roman';
 	font-weight: normal;
 	font-style: normal;
-	/* pls someone offer me a CDN for these fonts so I can save bandwidth for
-	   my email service */
 	src: url('https://pawnmail.com/fonts/lmroman10-regular.woff') format('woff');
 }
 
@@ -47,6 +48,10 @@ https://github.com/AndrewBelt/WiTeX
 	src: url('https://pawnmail.com/fonts/lmroman10-boldoblique.woff') format('woff');
 }
 
+li#pt-userpage { 
+	background: none 
+}
+
 /* Page Layout */
 
 body {
@@ -64,22 +69,29 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a, a:visited {
-	color: #a00;
+	color: #ED1B23;
 }
 
 ul {
 	list-style: disc;
 }
 
-#mw-navigation, #mw-page-base, #mw-head-base, #footer {
-	/* nuke everything but the content */
-	display: none;
+#left-navigation, #mw-panel, #p-views, #mw-page-base, #mw-head-base, #footer, div#featured-star, div.topicon{
+	/* nuke most things */
+	display: none !important;
 }
+
+
+
+.NavHead div, .NavFrame div, .navbox div, .navbox th, .navbox-title, .hlist div, th, table{
+	background: white !important;
+}
+
 
 /* Content Box */
 
 .mw-body {
-	max-width: 720px;
+	max-width: 80%;
 	margin: 2em auto;
 }
 
@@ -99,6 +111,10 @@ ul {
 
 #siteSub {
 	margin-bottom: 4em;
+}
+
+input.searchButton {
+    background-color: #efefef !important;
 }
 
 /* Article Body */
