@@ -1,5 +1,5 @@
 
-![WiTeX screenshot](https://raw.githubusercontent.com/AndrewBelt/WiTeX/master/screenshot.png)
+![WiTeX screenshot](https://raw.githubusercontent.com/Vaikus/WiTeX/master/screenshot.png)
 
 # WiTeX
 *If Donald Knuth had designed Wikipedia*
