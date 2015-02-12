@@ -17,9 +17,6 @@ https://github.com/AndrewBelt/WiTeX
 
 /* Latin Modern (LaTeX default) font */
 
-	/* pls someone offer me a CDN for these fonts so I can save bandwidth for
-	   my email service */
-
 @font-face {
 	font-family: 'Latin Modern Roman';
 	font-weight: normal;
@@ -48,8 +45,8 @@ https://github.com/AndrewBelt/WiTeX
 	src: url('https://pawnmail.com/fonts/lmroman10-boldoblique.woff') format('woff');
 }
 
-li#pt-userpage { 
-	background: none 
+#pt-userpage, #ca-edit, #p-views, div.vectorTabs ul, div.vectorTabs span{ 
+	background: none; 
 }
 
 /* Page Layout */
@@ -68,7 +65,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
 }
 
-a, a:visited {
+a, a:visited, div.vectorTabs li a {
 	color: #ED1B23;
 }
 
@@ -76,7 +73,7 @@ ul {
 	list-style: disc;
 }
 
-#left-navigation, #mw-panel, #p-views, #mw-page-base, #mw-head-base, #footer, div#featured-star, div.topicon{
+#left-navigation, #mw-panel, #ca-view, #ca-history, #ca-watch, #mw-page-base, #mw-head-base, #footer, #featured-star, .topicon{
 	/* nuke most things */
 	display: none !important;
 }
@@ -86,7 +83,6 @@ ul {
 .NavHead div, .NavFrame div, .navbox div, .navbox th, .navbox-title, .hlist div, th, table{
 	background: white !important;
 }
-
 
 /* Content Box */
 
@@ -113,10 +109,6 @@ ul {
 	margin-bottom: 4em;
 }
 
-input.searchButton {
-    background-color: #efefef !important;
-}
-
 /* Article Body */
 
 .mw-editsection {
@@ -133,7 +125,7 @@ dl dd {
 	text-align: center;
 }
 
-span.texhtml {
+.texhtml {
 	/* revert inline math to default font */
 	font-family: inherit;
 	font-size: inherit;
