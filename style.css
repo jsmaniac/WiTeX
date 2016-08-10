@@ -45,7 +45,7 @@ https://github.com/AndrewBelt/WiTeX
 	src: url('https://cdn.rawgit.com/AndrewBelt/WiTeX/master/fonts/lmroman10-bolditalic.woff') format('woff');
 }
 
-pt-userpage, #ca-edit, #p-views, div.vectorTabs ul, div.vectorTabs span{ 
+pt-userpage, #ca-edit, #ca-ve-edit, #p-views, div.vectorTabs ul, div.vectorTabs span{ 
 	background: none; 
 }
 
@@ -122,14 +122,14 @@ ul {
 	transition: opacity 0.5s ease-in-out;
 }
 
-#ca-edit, #ca-viewsource, #p-personal, #p-search{
+#ca-edit, #ca-ve-edit, #ca-viewsource, #p-personal, #p-search{
 	opacity: 0;
 	-webkit-transition: opacity 0.5s ease-in-out;
 	-moz-transition: opacity 0.5s ease-in-out;
 	transition: opacity 0.5s ease-in-out;
 }
 
-#mw-navigation:hover #ca-edit, #mw-navigation:hover #ca-viewsource, #mw-navigation:hover #p-personal, #mw-navigation:hover #p-search{
+#mw-navigation:hover #ca-edit, #mw-navigation:hover #ca-ve-edit, #mw-navigation:hover #ca-viewsource, #mw-navigation:hover #p-personal, #mw-navigation:hover #p-search{
 	opacity: 1;
 	-webkit-transition: opacity 0.5s ease-in-out;
 	-moz-transition: opacity 0.5s ease-in-out;
