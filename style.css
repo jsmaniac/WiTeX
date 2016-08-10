@@ -45,6 +45,10 @@ https://github.com/AndrewBelt/WiTeX
 	src: url('https://cdn.rawgit.com/AndrewBelt/WiTeX/master/fonts/lmroman10-bolditalic.woff') format('woff');
 }
 
+pt-userpage, #ca-edit, #p-views, div.vectorTabs ul, div.vectorTabs span{ 
+	background: none; 
+}
+
 @font-face {
 	font-family: 'Latin Modern Mono';
 	font-weight: normal;
@@ -73,7 +77,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
 }
 
-a, a:visited {
+a, a:visited, div.vectorTabs li a {
 	color: #a00;
 }
 
@@ -85,9 +89,58 @@ ul {
 	list-style: disc;
 }
 
-#mw-navigation, #mw-page-base, #mw-head-base, #footer {
-	/* nuke everything but the content */
-	display: none;
+/* Shift star on baseline */
+#ca-unwatch.icon a, #ca-watch.icon a, #ca-unwatch.icon a.loading, #ca-watch.icon a.loading {
+	/*background-position: 5px 21px !important;*/
+	background-position: 5px 69% !important;
+	transform-origin: 50% 64% !important; /* Calculating with original WP values, should be y=66% but looks better with y=64% */
+}
+
+/* nuke most things */
+#mw-page-base,#mw-head-base{
+	visibility:hidden;
+}
+#left-navigation, #mw-panel, #ca-view, #ca-history, #ca-watch, #p-cactions, #footer, #featured-star, .topicon{
+	background: white !important;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s ease-in-out;
+	-moz-transition: opacity 0.5s ease-in-out;
+	transition: opacity 0.5s ease-in-out;
+}
+
+#mw-navigation:hover #left-navigation, #mw-navigation:hover #ca-view, #mw-navigation:hover #ca-history, #mw-navigation:hover #ca-watch, #mw-navigation:hover #p-cactions, #featured-star:hover, .topicon:hover{
+	opacity: 0.55;
+	-webkit-transition: opacity 0.5s ease-in-out;
+	-moz-transition: opacity 0.5s ease-in-out;
+	transition: opacity 0.5s ease-in-out;
+}
+
+#mw-navigation:hover #mw-panel, #footer:hover {
+	opacity: 0.75;
+	-webkit-transition: opacity 0.5s ease-in-out;
+	-moz-transition: opacity 0.5s ease-in-out;
+	transition: opacity 0.5s ease-in-out;
+}
+
+#ca-edit, #ca-viewsource, #p-personal, #p-search{
+	opacity: 0;
+	-webkit-transition: opacity 0.5s ease-in-out;
+	-moz-transition: opacity 0.5s ease-in-out;
+	transition: opacity 0.5s ease-in-out;
+}
+
+#mw-navigation:hover #ca-edit, #mw-navigation:hover #ca-viewsource, #mw-navigation:hover #p-personal, #mw-navigation:hover #p-search{
+	opacity: 1;
+	-webkit-transition: opacity 0.5s ease-in-out;
+	-moz-transition: opacity 0.5s ease-in-out;
+	transition: opacity 0.5s ease-in-out;
+}
+
+#p-cactions-label, div.vectorTabs, div.vectorTabs ul li, .NavHead div, .NavFrame div, .navbox div, .navbox th, .navbox-title, .hlist div, th, table{
+	background: none !important;
+}
+div.vectorMenu div.menu {
+	border-top-width: 1px;
 }
 
 /* Content Box */
@@ -163,7 +216,8 @@ ul {
 
 .mw-editsection {
 	/* hide more non-content */
-	display: none;
+	/* display: none; */
+	opacity:0.1;
 }
 
 table.ambox {
