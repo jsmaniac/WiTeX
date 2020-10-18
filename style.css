@@ -116,44 +116,82 @@ ul {
 	transition: opacity 0.5s ease-in-out;
 }
 
-#ca-unwatch > *{
-	opacity: 0;
-	-webkit-transition: opacity 0.5s ease-in-out;
-	-moz-transition: opacity 0.5s ease-in-out;
-	transition: opacity 0.5s ease-in-out;
+/* #ca-unwatch > *{ */
+/* 	opacity: 0; */
+/* 	-webkit-transition: opacity 0.5s ease-in-out; */
+/* 	-moz-transition: opacity 0.5s ease-in-out; */
+/* 	transition: opacity 0.5s ease-in-out; */
+/* } */
+
+/* #mw-navigation:hover #ca-unwatch > *{ */
+/* 	opacity: 1; */
+/* 	-webkit-transition: opacity 0.5s ease-in-out; */
+/* 	-moz-transition: opacity 0.5s ease-in-out; */
+/* 	transition: opacity 0.5s ease-in-out; */
+/* } */
+
+#ca-unwatch {
+  background: none;
 }
 
-#mw-navigation:hover #ca-unwatch > *{
-	opacity: 1;
-	-webkit-transition: opacity 0.5s ease-in-out;
-	-moz-transition: opacity 0.5s ease-in-out;
-	transition: opacity 0.5s ease-in-out;
-}
-
-
-#ca-unwatch:before{
+#ca-unwatch a:before{
 	/* This image comes from Wikipedia */
     background-image: linear-gradient(transparent,transparent),url(data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%2216%22%20height%3D%2216%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22a%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23c2edff%22%2F%3E%3Cstop%20offset%3D%22.5%22%20stop-color%3D%22%2368bdff%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23fff%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2213.47%22%20y1%3D%2214.363%22%20x2%3D%224.596%22%20y2%3D%223.397%22%20id%3D%22b%22%20xlink%3Ahref%3D%22%23a%22%20gradientUnits%3D%22userSpaceOnUse%22%2F%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M8.103%201.146l2.175%204.408%204.864.707-3.52%203.431.831%204.845-4.351-2.287-4.351%202.287.831-4.845-3.52-3.431%204.864-.707z%22%20fill%3D%22url%28%23b%29%22%20stroke%3D%22%237cb5d1%22%20stroke-width%3D%220.9999199999999999%22%2F%3E%3C%2Fsvg%3E);
     width:16px;
     height:16px;
     content: "";
-    position: absolute;
-    top:2ex;
-    right:2ex;
-    opacity: 0.3;
-    -webkit-transition: opacity 0.5s ease-in-out;
-    -moz-transition: opacity 0.5s ease-in-out;
-    transition: opacity 0.5s ease-in-out;
+    /* position: absolute; */
+    /* top:2ex; */
+    /* right:2ex; */
+    /* opacity: 0.3; */
+    /* -webkit-transition: opacity 0.5s ease-in-out; */
+    /* -moz-transition: opacity 0.5s ease-in-out; */
+    /* transition: opacity 0.5s ease-in-out; */
 }
 
-#mw-navigation:hover #ca-unwatch:before{
-    opacity: 0;
-    -webkit-transition: opacity 0.2s ease-in-out;
-    -moz-transition: opacity 0.2s ease-in-out;
-    transition: opacity 0.2s ease-in-out;
+#mw-navigation #ca-unwatch a:before {
+  content: "";
+  opacity: 0;
+  height: 1.6em;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
-#mw-navigation:hover #left-navigation, #mw-navigation:hover #ca-view, #mw-navigation:hover #ca-history, #mw-navigation:hover #ca-watch, #mw-navigation:hover #p-cactions, #featured-star:hover, .topicon:hover{
+#ca-unwatch a {
+  overflow:visible !important; /* allow the #ca-unwatch to have a :after outside of the bounds of this element. */
+}
+
+#ca-unwatch a:after {
+ content: "";
+ width: 2em;
+ height: 2em;
+ position:fixed;
+ top:2ex;
+ right:2ex;
+ background-repeat: no-repeat;
+ background-position: top right;
+ background-image: linear-gradient(transparent,transparent),url(/w/skins/Vector/resources/skins.vector.styles/images/unwatch-icon.svg?3de3e);
+ opacity: 0.5;
+ -webkit-transition: opacity 0.2s ease-in-out;
+ -moz-transition: opacity 0.2s ease-in-out;
+ transition: opacity 0.2s ease-in-out;
+ transition-delay: 0.25s;
+}
+
+#ca-unwatch a {
+ color:transparent; /* hide the text */
+ background: none;
+}
+
+#mw-navigation:hover #ca-unwatch a:after {
+   opacity: 0;
+   -webkit-transition: opacity 0.2s ease-in-out;
+   -moz-transition: opacity 0.2s ease-in-out;
+   transition: opacity 0.2s ease-in-out;
+}
+
+#mw-navigation:hover #left-navigation, #mw-navigation:hover #ca-view, #mw-navigation:hover #ca-history, #mw-navigation:hover #ca-watch, #mw-navigation:hover #p-cactions, #featured-star:hover, .topicon:hover, #mw-navigation:hover #ca-unwatch a:before{
 	opacity: 0.55;
 	-webkit-transition: opacity 0.5s ease-in-out;
 	-moz-transition: opacity 0.5s ease-in-out;
