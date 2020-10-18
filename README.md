@@ -11,6 +11,9 @@ If you have a Wikipedia account, open your [Preferences](https://en.wikipedia.or
 Paste the contents of [`style.css`](https://raw.githubusercontent.com/jsmaniac/WiTeX/master/style.css) into the editor, and save.
 For better alignment of mathematical equations, enable MathML or Mathjax in the Appearance tab.
 
+On some Wikipedia languages, it is necessary to check the "Use Legacy
+Vector" checkbox in Preferences -> Appearance.
+
 Alternatively, you can load the CSS using a browser plugin (such as [Stylish for Firefox](https://addons.mozilla.org/en-US/firefox/addon/stylish/?src=external-userstyleshome) or [Stylish for Chrome](https://chrome.google.com/webstore/detail/fjnbnpbmkenffdnngjfgmeleoegfcffe)) for the domain `https?://*.wikipedia.org`.
 
 
