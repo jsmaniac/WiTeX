@@ -114,42 +114,21 @@ ul {
 	transition: opacity 0.5s ease-in-out;
 }
 
-/* #ca-unwatch > *{ */
-/* 	opacity: 0; */
-/* 	-webkit-transition: opacity 0.5s ease-in-out; */
-/* 	-moz-transition: opacity 0.5s ease-in-out; */
-/* 	transition: opacity 0.5s ease-in-out; */
-/* } */
-
-/* #mw-navigation:hover #ca-unwatch > *{ */
-/* 	opacity: 1; */
-/* 	-webkit-transition: opacity 0.5s ease-in-out; */
-/* 	-moz-transition: opacity 0.5s ease-in-out; */
-/* 	transition: opacity 0.5s ease-in-out; */
-/* } */
-
 #ca-unwatch {
   background: none;
 }
 
 #ca-unwatch a:before{
   background-image: linear-gradient(transparent,transparent),url(/w/skins/Vector/resources/skins.vector.styles/images/unwatch-icon.svg?3de3e);
-    width:16px;
-    height:16px;
-    content: "";
-    /* position: absolute; */
-    /* top:2ex; */
-    /* right:2ex; */
-    /* opacity: 0.3; */
-    /* -webkit-transition: opacity 0.5s ease-in-out; */
-    /* -moz-transition: opacity 0.5s ease-in-out; */
-    /* transition: opacity 0.5s ease-in-out; */
+  width:16px;
+  height:16px;
+  content: "";
 }
 
-#mw-navigation #ca-unwatch a:before {
+#mw-navigation #ca-unwatch a:before, #mw-navigation #ca-watch a:before {
   content: "";
   opacity: 0;
-  height: 1.6em;
+  height: 1.8em;
   -webkit-transition: opacity 0.3s ease-in-out;
   -moz-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
@@ -176,9 +155,12 @@ ul {
  transition-delay: 0.25s;
 }
 
-#ca-unwatch a {
- color:transparent; /* hide the text */
- background: none;
+#ca-unwatch a, #ca-watch a {
+ color:transparent;
+ background:none;
+}
+#ca-talk, #ca-talk a, #p-namespaces {
+  background: none;
 }
 
 #mw-navigation:hover #ca-unwatch a:after {
@@ -188,7 +170,7 @@ ul {
    transition: opacity 0.2s ease-in-out;
 }
 
-#mw-navigation:hover #left-navigation, #mw-navigation:hover #ca-view, #mw-navigation:hover #ca-history, #mw-navigation:hover #ca-watch, #mw-navigation:hover #p-cactions, #featured-star:hover, .topicon:hover, #mw-navigation:hover #ca-unwatch a:before{
+#mw-navigation:hover #left-navigation, #mw-navigation:hover #ca-view, #mw-navigation:hover #ca-history, #mw-navigation:hover #ca-watch, #mw-navigation:hover #p-cactions, #featured-star:hover, .topicon:hover, #mw-navigation:hover #ca-unwatch a:before, #mw-navigation #ca-watch a:before {
 	opacity: 0.55;
 	-webkit-transition: opacity 0.5s ease-in-out;
 	-moz-transition: opacity 0.5s ease-in-out;
